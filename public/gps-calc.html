@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPS Calculator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/gps-calc.css">
+  <script src="../js/gps.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>GPS (Grade Point Semester)</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="left-side">
+        <div class="form-group">
+          <label for="total-credits">Total Course Credits</label>
+          <input class="total-credits-input" type="number" name="total-credits" id="total-credits" placeholder="0">
+        </div>
+  
+        <div class="courses-container">
+  
+          <div class="form-group">
+            <label for="course">Courses 1</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-1" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-1" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 2</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-2" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-2" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 3</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-3" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-3" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 4</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-4" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-4" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 5</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-5" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-5" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 6</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-6" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-6" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 7</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-7" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-7" placeholder="Grade Weight">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course">Courses 8</label>
+            <div class="inner-form-course">
+              <input class="credits-input" type="number" name="credits" id="credits-8" placeholder="Total Credits">
+              <span>&#215;</span>
+              <input class="grade-weight-input" type="number" name="grade-weight" id="grade-weight-8" placeholder="Grade Weight">
+            </div>
+          </div>
+
+        </div>
+  
+        <p class="result" id="result">Result : 0</p>
+      </div>
+  
+      <div class="right-side">
+
+      </div>
+    </div>
+
+    <label class="error-lbl" id="error-lbl"></label>
+
+    <div class="btn-container">
+      <button id="submit-btn" class="btn submit-btn">Submit</button>
+      <button id="clear-btn" class="btn clear-btn">Clear</button>
+    </div>
+  </main>
+
+</body>
+</html>

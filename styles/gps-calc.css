@@ -1,0 +1,204 @@
+:root{
+  --clr-gray-100: hsl(81, 28%, 90%);
+  --clr-gray-500: hsl(150, 14%, 84%);
+  --clr-yellow-500: hsl(44, 88%, 66%);
+  --clr-yellow-600: hsl(44, 100%, 55%);
+  --clr-brown-800: hsl(120, 2%, 20%);
+  --clr-brown-900: hsl(60, 1%, 14%);
+  --clr-red: hsl(8, 82%, 58%);
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+input{
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+  background-color: var(--clr-gray-500);
+  color: var(--clr-brown-900);
+  font-family: "Ubuntu", serif;
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  padding-bottom: 4rem;
+}
+
+header{
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-gray-100);
+  padding: 1rem 2rem;
+}
+
+header h1{
+  font-size: 1.5rem;
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  gap: 1rem;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  gap: 5rem;
+}
+
+.left-side{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-side{
+  display: flex;
+  justify-content: center;
+  align-items: start;;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inner-form-course{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.courses-container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  align-self: center;
+}
+
+.btn{
+  width: 100px;
+  padding: .5em 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+  transition: .2s;
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+}
+
+.btn:hover{
+  transform: scale(1.0925);
+}
+
+.btn:active{
+  transform: scale(.9);
+}
+
+.submit-btn{
+  background-color: var(--clr-yellow-500);
+}
+
+.clear-btn{
+  background-color: var(--clr-red);
+}
+
+.total-credits-input{
+  border: 1px var(--clr-brown-900) solid;
+  border-radius: 8px;
+  width: 50px;
+  padding: .5rem;
+  text-align: center;
+  background-color: var(--clr-gray-100);
+}
+
+.credits-input, .grade-weight-input{
+  border: 1px var(--clr-brown-900) solid;
+  border-radius: 8px;
+  padding: .5rem;
+  width: 130px;
+  text-align: center;
+  background-color: var(--clr-gray-100);
+  font-size: .925rem;
+}
+
+.error-lbl{
+  color: var(--clr-red);
+  font-weight: var(--fw-bold);
+}
