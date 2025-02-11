@@ -144,7 +144,7 @@ main {
   gap: 2rem;
 }
 
-.form-group {
+.form-group, .first-form-group {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +201,7 @@ main {
 }
 
 .total-credits-input {
-  border: 1px var(--clr-brown-900) solid;
+  border: 2px var(--clr-brown-900) solid;
   border-radius: 8px;
   width: 50px;
   padding: 0.3rem;
@@ -211,7 +211,7 @@ main {
 
 .credits-input,
 .grade-weight-input {
-  border: 1px var(--clr-brown-900) solid;
+  border: 2px var(--clr-brown-900) solid;
   border-radius: 8px;
   padding: 0.5rem;
   width: 130px;
@@ -223,4 +223,41 @@ main {
 .error-lbl {
   color: var(--clr-red);
   font-weight: var(--fw-bold);
+}
+
+.result{
+  font-weight: var(--fw-bold);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 576px) {
+  header h1{
+    font-size: 1.3rem;
+  }
+
+  main{
+    flex-direction: column;
+    font-size: .925rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .courses-container{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-group{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-container{
+    flex-direction: column;
+  }
+
+  .btn-container{
+    gap: 1rem;
+  }
 }
