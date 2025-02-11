@@ -69,6 +69,7 @@ header{
 }
 
 main{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,3 +108,12 @@ main{
   transform: scale(.985);
 }
 
+@media (max-width: 576px) {
+  main{
+    flex-direction: column;
+  }
+
+  .btn-container{
+    flex-direction: column;
+  }
+}
