@@ -160,6 +160,10 @@ main{
   background-color: var(--clr-yellow-500);
 }
 
+.add-btn{
+  width: 50px;
+}
+
 .clear-btn{
   background-color: var(--clr-red);
 }
@@ -167,6 +171,13 @@ main{
 .result{
   font-weight: var(--fw-bold);
   font-size: 1.3rem;
+}
+
+.error-lbl{
+  color: var(--clr-red);
+  font-weight: var(--fw-bold);
+  align-self: center;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 576px) {

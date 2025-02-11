@@ -21,22 +21,20 @@
   <main>
     <div class="form-group">
       <label for="total-semesters">How many semesters you took?</label>
-      <input type="number" name="total-semesters" id="total-semesters" class="input primary-input" placeholder="0">
+      <input type="number" name="total-semesters" id="total-semesters" class="input primary-input" placeholder="0" min="0" max="8">
+      <button class="btn add-btn" id="add-btn">Add</button>
     </div>
 
-    <!-- <div class="semester-box">
-      <div class="form-group">
+    <div class="semester-box">
+      <!-- <div class="form-group">
         <label for="semester">Semester 1</label>
         <input type="number" name="semester" id="semester" class="input secondary-input" placeholder="Total GPS">
-      </div>
-
-      <div class="form-group">
-        <label for="semester">Semester 2</label>
-        <input type="number" name="semester" id="semester" class="input secondary-input" placeholder="Total GPS">
-      </div>
-    </div> -->
+      </div> -->
+    </div>
 
     <p class="result" id="result">Result : 0</p>
+
+    <label class="error-lbl" id="error-lbl"></label>
 
     <div class="btn-container">
       <button id="submit-btn" class="btn submit-btn">Submit</button>

@@ -220,9 +220,11 @@ main {
   font-size: 0.925rem;
 }
 
-.error-lbl {
+.error-lbl{
   color: var(--clr-red);
   font-weight: var(--fw-bold);
+  align-self: center;
+  font-size: 1.1rem;
 }
 
 .result{
