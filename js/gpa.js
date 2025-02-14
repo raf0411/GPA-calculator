@@ -6,6 +6,8 @@ const clearBtn = document.getElementById("clear-btn");
 const errorLbl = document.getElementById("error-lbl");
 const semesterBox = document.querySelector(".semester-box");
 
+totalSemesters.value = "";
+
 let semester1;
 let semester2;
 let semester3;
@@ -15,18 +17,6 @@ let semester6;
 let semester7;
 let semester8;
 let totalSemestersVal;
-
-addBtn.addEventListener("click", () => {
-  addSemesterInput(totalSemesters.value);
-});
-
-submitBtn.addEventListener("click", () => {
-  calculateGPA();
-});
-
-clearBtn.addEventListener("click", () => {
-  clearValues();
-});
 
 function addSemesterInput(totalSemesters) {
   errorLbl.textContent = "";
@@ -54,67 +44,30 @@ function addSemesterInput(totalSemesters) {
 }
 
 function calculateGPA() {
+  errorLbl.textContent = "";
+
   if (totalSemesters.value === "") {
     errorLbl.textContent = "Please add semesters!";
     return;
   }
 
-  if (totalSemesters === 1) {
-    semester1 = document.getElementById('semester-1').value;
-  } else if (totalSemesters === 2) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-  } else if (totalSemesters === 3) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-  } else if (totalSemesters === 4) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-    semester4 = document.getElementById('semester-4').value;
-  } else if (totalSemesters === 5) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-    semester4 = document.getElementById('semester-4').value;
-    semester5 = document.getElementById('semester-5').value;
-  } else if (totalSemesters === 6) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-    semester4 = document.getElementById('semester-4').value;
-    semester5 = document.getElementById('semester-5').value;
-    semester6 = document.getElementById('semester-6').value;
-  } else if (totalSemesters === 7) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-    semester4 = document.getElementById('semester-4').value;
-    semester5 = document.getElementById('semester-5').value;
-    semester6 = document.getElementById('semester-6').value;
-    semester7 = document.getElementById('semester-7').value;
-  } else if (totalSemesters === 8) {
-    semester1 = document.getElementById('semester-1').value;
-    semester2 = document.getElementById('semester-2').value;
-    semester3 = document.getElementById('semester-3').value;
-    semester4 = document.getElementById('semester-4').value;
-    semester5 = document.getElementById('semester-5').value;
-    semester6 = document.getElementById('semester-6').value;
-    semester7 = document.getElementById('semester-7').value;
-    semester8 = document.getElementById('semester-8').value;
-  }
-
   let totalPoints = 0;
+
   for (let i = 1; i <= totalSemestersVal; i++) {
     const semesterInput = document.getElementById(`semester-${i}`);
     const semesterValue = parseFloat(semesterInput.value) || 0;
+
+    if (semesterValue < 0 || semesterValue > 4) {
+      errorLbl.textContent = "GPS must be between 0 and 4!";
+      return;
+    }
+
     totalPoints += semesterValue;
   }
 
   let resultVal = totalPoints / totalSemestersVal;
 
-  result.textContent = `Result : ${resultVal}`;
+  result.textContent = `Result : ${resultVal.toFixed(2)}`;
 }
 
 function clearValues() {
@@ -122,3 +75,9 @@ function clearValues() {
   semesterBox.innerHTML = "";
   result.textContent = "Result : 0";
 }
+
+addBtn.addEventListener("click", () => {addSemesterInput(totalSemesters.value);});
+
+submitBtn.addEventListener("click", () => {calculateGPA();});
+
+clearBtn.addEventListener("click", () => {clearValues();});

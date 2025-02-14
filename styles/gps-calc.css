@@ -200,7 +200,11 @@ main {
   background-color: var(--clr-red);
 }
 
-.total-credits-input {
+.add-btn{
+  width: 50px;
+}
+
+.total-credits-input, .total-courses-input {
   border: 2px var(--clr-brown-900) solid;
   border-radius: 8px;
   width: 50px;
